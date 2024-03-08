@@ -19,7 +19,7 @@ void input() {
 	cout << "Masukan Elemen Array" << endl;
 	cout << "====================" << endl;
 
-	for (int i 0; i < n; i++) {
+	for (int i = 0; i < n; i++) {
 		cout << "Data ke-" << (i + 1) << " : ";
 		cin >> a[i];
 	}
@@ -28,7 +28,7 @@ void input() {
 void BubbleSortArray() {
 	int pass = 1;
 	do {
-		for (int j = 0; j <= n - 1 1 pass; j++) {
+		for (int j = 0; j <= n - 1 - pass; j++) {
 			if (a[j] > a[j + 1]) {
 				int temp;
 				temp = a[j];
@@ -40,3 +40,15 @@ void BubbleSortArray() {
 
 	} while (pass <= n - 1);
 }
+
+void display() {
+	cout << endl;
+	cout << "=================================" << endl;
+	cout << "Element Array yang telah tersusun" << endl;
+	cout << "=================================" << endl;
+	for (int j = 0; j < n; j++) {
+		cout << a[j] << endl;
+	}
+	cout << "Jumlah pass = " << n - 1 << endl;
+	cout << endl;
+ }
